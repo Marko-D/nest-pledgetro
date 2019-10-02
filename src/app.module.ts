@@ -3,9 +3,10 @@ import {TypeOrmModule} from '@nestjs/typeorm'
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { PledgeModule } from './pledge/pledge.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot()],
+  imports: [TypeOrmModule.forRoot(), PledgeModule],
   controllers: [AppController],
   providers: [AppService],
 })
